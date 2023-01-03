@@ -1,0 +1,9 @@
+:80 {
+	root * /root/app/build
+	encode gzip
+	reverse_proxy * localhost:3000
+	log {
+		output file /root/caddy-logs/logs.log
+	}
+}
+
